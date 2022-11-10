@@ -5,7 +5,7 @@ name := "scala3-playground"
 val scala3Version = "3.2.1"
 
 scalacOptions ++= Seq(
-  "-J-target:jvm-19",
+  "-J-target:jvm-19", // It is no preventing not to compile scala with other java version, it just shows the byte code java version is jdk 19
   "-J-release 19",
   "-J-enable-preview 19"
 )
