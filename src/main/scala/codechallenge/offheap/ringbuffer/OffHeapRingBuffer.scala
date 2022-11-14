@@ -1,4 +1,4 @@
-package offheap.ringbuffer
+package codechallenge.offheap.ringbuffer
 
 import java.lang.foreign.*
 import java.lang.foreign.MemoryLayout.PathElement

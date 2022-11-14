@@ -1,4 +1,4 @@
-package offheap.ringbuffer
+package codechallenge.offheap.ringbuffer
 
 import java.lang.foreign.*
 import java.lang.foreign.MemoryLayout.PathElement
@@ -90,10 +90,6 @@ class OffHeapRingBufferSegment(
 
     Using(MemorySession.openConfined()) { session =>
 
-      /*val allocator: SegmentAllocator = SegmentAllocator.newNativeArena(session)
-      val segment: MemorySegment = allocator.allocate(ringBufferMemoryLayout)
-      val segment: MemorySegment = MemorySegment.allocateNative(ptsLayout, MemorySession.openImplicit())
-      val segmentOfCharsString = allocator.allocateArray(ValueLayout.JAVA_CHAR, Array.ofDim[Char](5): _*) */
       segment = MemorySegment.allocateNative(ringBufferMemoryLayout, session)
 
       def loop(): Unit = if close then () else loop()
