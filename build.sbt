@@ -1,5 +1,6 @@
 import Dependencies._
 logLevel := Level.Info
+
 name := "scala3-playground"
 
 val scala3Version = "3.2.1"
@@ -25,5 +26,9 @@ lazy val root = project
   .settings(
     version := "0.1.0-SNAPSHOT",
     scalaVersion := scala3Version,
-    libraryDependencies ++= lib.cats.core ++ lib.test.munit
+    libraryDependencies ++=
+      lib.cats.core ++
+        lib.test.munit ++
+        lib.api.tapir.core ++
+        lib.api.tapir.circe
   )
