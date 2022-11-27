@@ -24,9 +24,10 @@ javaOptions ++= Seq(
 lazy val root = project
   .in(file("."))
   .settings(
-    version := "0.1.0-SNAPSHOT",
+    version := "0.1.0",
     libraryDependencies ++= Nil ++
       lib.cats.core ++
+      lib.cats.effect.core ++
       lib.test.munit ++
       lib.api.tapir.core ++
       lib.api.tapir.circe ++

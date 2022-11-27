@@ -11,3 +11,6 @@
 * [ ] add backstage for you documentation
 * [ ] add gitter8 for your new project dynamically
 * [ ] set up a commandline chain remotely on ubuntu for running and installing app for example openvpn, dns server, interactively
+* [ ] Use automatic versioning
+* [ ] Check `sbt-typelevel`
+* [ ] [idna4s](https://github.com/typelevel/idna4s) is a good project for modularity, command aliases

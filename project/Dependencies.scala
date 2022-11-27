@@ -3,10 +3,11 @@ import sbt._ // For understanding Dependencies object as an sbt file
 object Dependencies {
 
   private object ver {
-    val catsCore = "2.8.0"
+    val catsCore = "2.9.0"
+    val catsEffect = "3.4.1"
     val munit = "0.7.29"
-    val tapir = "1.2.1"
-    val logback = "1.4.4"
+    val tapir = "1.2.2"
+    val logback = "1.4.5"
     val scalaLogging = "3.9.5"
     val pureConfig = "0.17.2"
   }
@@ -15,6 +16,11 @@ object Dependencies {
 
     object cats {
       val core: Seq[ModuleID] = Seq("org.typelevel" %% "cats-core" % ver.catsCore)
+
+      object effect {
+        // Cats effect core withSources() to download source without IDE plugin and same for withJavadoc()
+        val core: Seq[ModuleID] = Seq("org.typelevel" %% "cats-effect" % ver.catsEffect withSources () withJavadoc ())
+      }
     }
 
     object test {
