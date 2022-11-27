@@ -14,3 +14,5 @@
 * [ ] Use automatic versioning
 * [ ] Check `sbt-typelevel`
 * [ ] [idna4s](https://github.com/typelevel/idna4s) is a good project for modularity, command aliases
+* [ ] API test
+* [ ] Use [Scala Stewards](https://github.com/scala-steward-org/scala-steward) for updating automatically your dependencies and give you a pull request
