@@ -6,10 +6,11 @@ object Dependencies {
     val catsCore = "2.9.0"
     val catsEffect = "3.4.1"
     val munit = "0.7.29"
-    val tapir = "1.2.2"
+    val tapir = "1.2.6"
     val logback = "1.4.5"
     val scalaLogging = "3.9.5"
     val pureConfig = "0.17.2"
+    val http4s = "1.0.0-M37"
   }
 
   object lib {
@@ -36,6 +37,13 @@ object Dependencies {
         val circe: Seq[ModuleID] = Seq("com.softwaremill.sttp.tapir" %% "tapir-json-circe" % ver.tapir)
         // add ZIO HTTP server with tapir compatibility for converting endpoints to zio routes
         val zioHttp: Seq[ModuleID] = Seq("com.softwaremill.sttp.tapir" %% "tapir-zio-http-server" % ver.tapir)
+      }
+
+      object http4s {
+        val dsl: Seq[ModuleID] = Seq("org.http4s" %% "http4s-dsl" % ver.http4s)
+        val emberServer: Seq[ModuleID] = Seq("org.http4s" %% "http4s-ember-server" % ver.http4s)
+        val emberClient: Seq[ModuleID] = Seq("org.http4s" %% "http4s-ember-client" % ver.http4s)
+        val core: Seq[ModuleID] = dsl ++ emberServer ++ emberClient
       }
     }
 

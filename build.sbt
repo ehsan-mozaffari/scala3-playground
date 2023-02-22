@@ -21,6 +21,14 @@ javaOptions ++= Seq(
   "--enable-preview"
 )
 
+// checks the specific version of java version to run the project
+initialize := {
+  val _ = initialize.value // Needed to run previous initialization.
+  assert(scala.util.Properties.isJavaAtLeast("19"), "Java 19 is required!")
+}
+
+resolvers ++= Resolver.sonatypeOssRepos("snapshots")
+
 lazy val root = project
   .in(file("."))
   .settings(
@@ -32,6 +40,7 @@ lazy val root = project
       lib.api.tapir.core ++
       lib.api.tapir.circe ++
       lib.api.tapir.zioHttp ++
+      lib.api.http4s.core ++
       lib.log.logback ++
       lib.log.scalaLogging ++
       lib.config.pureConfigCore ++
