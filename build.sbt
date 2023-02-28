@@ -29,25 +29,28 @@ initialize := {
 
 resolvers ++= Resolver.sonatypeOssRepos("snapshots")
 
+// Add ZIO test in sbt
+testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
+
 lazy val root = project
   .in(file("."))
   .settings(
-    version := "0.1.0",
+    version                     := "0.1.0",
     libraryDependencies ++= Nil ++
-      lib.cats.core ++
-      lib.cats.effect.core ++
-      lib.zio.core ++
-      lib.zio.test ++
-      lib.zio.testSbt ++
-      lib.zio.streams ++
-      lib.zio.testJUnit ++
-      lib.test.munit ++
-      lib.api.tapir.core ++
-      lib.api.tapir.circe ++
-      lib.api.tapir.zioHttp ++
-      lib.api.http4s.core ++
-      lib.log.logback ++
-      lib.log.scalaLogging ++
+      lib.cats.core             ++
+      lib.cats.effect.core      ++
+      lib.zio.core              ++
+      lib.zio.test              ++
+      lib.zio.testSbt           ++
+      lib.zio.streams           ++
+      lib.zio.testJUnit         ++
+      lib.test.munit            ++
+      lib.api.tapir.core        ++
+      lib.api.tapir.circe       ++
+      lib.api.tapir.zioHttp     ++
+      lib.api.http4s.core       ++
+      lib.log.logback           ++
+      lib.log.scalaLogging      ++
       lib.config.pureConfigCore ++
       Nil
   )

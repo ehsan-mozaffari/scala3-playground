@@ -28,12 +28,12 @@ object Dependencies {
     }
 
     object zio {
-      val core: Seq[ModuleID]      = Seq("dev.zio" %% "zio" % ver.zio withSources () withJavadoc ())
-      val test: Seq[ModuleID]      = Seq("dev.zio" %% "zio-test" % ver.zio withSources () withJavadoc ())
-      val testSbt: Seq[ModuleID]   = Seq(
+      val core:      Seq[ModuleID] = Seq("dev.zio" %% "zio" % ver.zio withSources () withJavadoc ())
+      val test:      Seq[ModuleID] = Seq("dev.zio" %% "zio-test" % ver.zio withSources () withJavadoc ())
+      val testSbt:   Seq[ModuleID] = Seq(
         "dev.zio" %% "zio-test-sbt" % ver.zio withSources () withJavadoc ()
       )
-      val streams: Seq[ModuleID]   = Seq(
+      val streams:   Seq[ModuleID] = Seq(
         "dev.zio" %% "zio-streams" % ver.zio withSources () withJavadoc ()
       )
       val testJUnit: Seq[ModuleID] = Seq(
@@ -49,9 +49,9 @@ object Dependencies {
     object api {
       object tapir {
         // the core tapir endpoint api
-        val core: Seq[ModuleID]    = Seq("com.softwaremill.sttp.tapir" %% "tapir-core" % ver.tapir)
+        val core:    Seq[ModuleID] = Seq("com.softwaremill.sttp.tapir" %% "tapir-core" % ver.tapir)
         // circe support for tapir. it has circe-core, circe-parser, circe-generic. No need for adding circe solely.
-        val circe: Seq[ModuleID]   = Seq(
+        val circe:   Seq[ModuleID] = Seq(
           "com.softwaremill.sttp.tapir" %% "tapir-json-circe" % ver.tapir
         )
         // add ZIO HTTP server with tapir compatibility for converting endpoints to zio routes
@@ -61,10 +61,10 @@ object Dependencies {
       }
 
       object http4s {
-        val dsl: Seq[ModuleID]         = Seq("org.http4s" %% "http4s-dsl" % ver.http4s)
+        val dsl:         Seq[ModuleID] = Seq("org.http4s" %% "http4s-dsl" % ver.http4s)
         val emberServer: Seq[ModuleID] = Seq("org.http4s" %% "http4s-ember-server" % ver.http4s)
         val emberClient: Seq[ModuleID] = Seq("org.http4s" %% "http4s-ember-client" % ver.http4s)
-        val core: Seq[ModuleID]        = dsl ++ emberServer ++ emberClient
+        val core:        Seq[ModuleID] = dsl ++ emberServer ++ emberClient
       }
     }
 
