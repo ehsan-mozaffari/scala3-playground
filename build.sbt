@@ -3,7 +3,7 @@ logLevel := Level.Info
 
 name := "scala3-playground"
 
-lazy val scala3Version = "3.2.1"
+lazy val scala3Version = "3.2.2"
 scalaVersion := scala3Version
 
 scalacOptions ++= Seq(
@@ -36,6 +36,11 @@ lazy val root = project
     libraryDependencies ++= Nil ++
       lib.cats.core ++
       lib.cats.effect.core ++
+      lib.zio.core ++
+      lib.zio.test ++
+      lib.zio.testSbt ++
+      lib.zio.streams ++
+      lib.zio.testJUnit ++
       lib.test.munit ++
       lib.api.tapir.core ++
       lib.api.tapir.circe ++
