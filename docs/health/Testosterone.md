@@ -24,7 +24,18 @@ High volume and short rest periods usually induced the largest Testosterone rele
 # MY CONCLUSION
 * When using exogenous Testosterone because you cause more damage and also more conversion for 
 making Myofibrils proteins you have to eat protein in your diet more than 2gr per kilo of your body weight
-* 
-
+* Eat Green tea to inhibit 5 alpha reeducate for preventing hair loss 
+* Optimal range is 120 mg per week and inject every other days in a week (30 mg per shot). Because you have to have
+a steady amount in your blood each day and use Testosterone enanthate because it can remain much longer. 
+And also take it before the gym so you could use more of it or exactly after gym.
+* See the side effects of exogenous Testosterone and keep track of them and adjust your shots
+* Eat just more meat and animal fat (raw is preferable) to suppress your appetite. Your average calories intake 
+is about 2400 calories and for weight loss you might be under that by eating more proteins and fat.
+* Have proper sleep to improve the healing process of muscles.
+* To prevent your testes for shrinking you could eat Fadogia Agrestis herb. Fadogia increases Luteinising Hormone.
+It can command testes to make more Testosterone and make them bigger. It commands testes to make more hormones.
+Use HCG supplements. Chasteberry(Panj angosht) is another alternative.
+* Do not inhibit too much DHT (like Tumeric and Melatonin) because it has more benefits on strength, recovery from exercise, libido, etc.
+* Zinc can increase Testosterone and Spermatogenesis significantly.
 
 
