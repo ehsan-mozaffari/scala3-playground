@@ -124,8 +124,14 @@ docker compose -f mongo.db down # removes network and stops the container
 ```
 
 ## Dockerfile
-Your application must to package container we use `Dockerfile`. Docker file is a blueprint for creating docker images.
+Your application must package container we use `Dockerfile`. Docker file is a blueprint for creating docker images.
 You could see the Dockerfile of all application in docker hub.
+
+NOTE: after each change you have to build the image if anything changes:
+```shell
+docker build -t [image-name] .
+```
+
 ```shell
 FROM node # like linux alpine. It is an alpine with the node installed. 
 ENV MONGO_INITDB_ROOT_USERNAME=mongoadmin \ # better to not to do that and do it in docker compose file so you don't have to rebuild your application internally.
@@ -135,6 +141,38 @@ COPY . /home/app # Difference with RUN is that it executed in host. so COPY coul
 CMD ["node", "/home/app/server.js"] # is like # node server.js that runs the node js file in cmd. Difference between CMD and RUN: CMD is an entry point command. A docker file can have multiple RUN s commands but CMD is just one and CMD marks the docker file that this is the command that you want to execute to run a server as an entry point
 
 ```
+
+### Docker Environment Variables
+Docker supports Environment Variables as a practical way externalizing configuration. When included in a
+Docker image, Environment Variables become available to app containers created based on the image. Docker
+Supports two Environment Variable types:
+1. **ARG**: Are build-time variables like version of libraries or OS. Their only purpose is to assist building
+        a docker image. You could retrieve them after via `docker history` command. Users can override it just
+        in a `docker build` command
+2. **ENV**: Are persisted inside the image and containers created from that template. Users can 
+        override **ENV** values in command line (build and/or run) or in `.env` file.
+
+
+Both **ARG** and **ENV** variables are defined in the `Dockerfile` as follows: 
+
+```shell
+ARG [VRIABLE_NAME] # Define an ARG variable. Like ARG OS_VERSION
+ARG [VRIABLE_NAME]=[default-value] # Define an ARG variable with default value. Like ARG OS_VERSION=18.04
+ENV [VRIABLE_NAME] # Define an ENV variable. Like ENV MYSQL_USERNAME
+ENV [VRIABLE_NAME]=[default-value] # Define an ENV variable with default value. Like ENV MYSQL_USERNAME=root
+RUN echo "The ARG/ENV variable value is $VARIABLE_NAME"
+```
+Overriding ARG in build:
+```shell
+doecker build -t [image-name] --build-arg [ARG_VARIABLE_NAME]=[value]
+```
+
+You could see the values of ENV variable persisted while the ARG variable no longer exists.
+```shell
+docekr container inspect [container-name-or-id]
+```
+
+
 Build image from Docker file:
 ```sh
 docker build -t my-app:1.0 . # . is where docker file. 1.0 is the tag of image
