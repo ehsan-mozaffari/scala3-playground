@@ -1,6 +1,20 @@
 # Installation
 
-Install `vditor` from the intellij idea plugins.
+Install `vditor` from the IntelliJ IDEA plugins.
+
+* Chart syntax
+  * Flow chart, sequence diagram, Gantt chart, supported by Mermaid
+  * Graphviz
+  * Line chart, pie chart, brain chart, etc., supported by ECharts
+* Stave: supported by abc.js
+* Math formulas: Math formula blocks, row-level math formulas, supported by MathJax and KaTeX
+* YAML Front Matter
+* Chinese context optimization
+  * Insert space between Chinese and Western
+  * Terminology spelling correction
+  * Chinese followed by English comma period and other punctuation are replaced with Chinese corresponding punctuation
+
+Most of the above features can be enabled or disabled through the switch configuration, developers can choose to match according to their own application scenarios.
 
 
 <p align="center">
