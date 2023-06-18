@@ -14,7 +14,7 @@ Install `vditor` from the IntelliJ IDEA plugins.
   * Terminology spelling correction
   * Chinese followed by English comma period and other punctuation are replaced with Chinese corresponding punctuation
 
-Most of the above features can be enabled or disabled through the switch configuration, developers can choose to match according to their own application scenarios.
+Most of the above features can be enabled or disabled through the switch configuration, developers can choose to match, according to their own application scenarios.
 
 
 <p align="center">
