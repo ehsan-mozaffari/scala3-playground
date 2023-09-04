@@ -266,3 +266,10 @@ USER tom # This is docker DIRECTIVE. some images has some generic user so you co
 CMD node index.js
 ```
 8) Make sure your docker image has not vulnerabilities: using `docker scan myapp:1.0` and you have to be login in docker hub to scan your application and docker users a service called `snyk` to find out the issues
+
+
+## 9 Docker postgres performance tuning
+[this](https://pankajconnect.medium.com/performance-tuning-postgresql-containers-in-a-docker-environment-89ca7090e072)
+
+and [this](https://itnext.io/benchmark-postgresql-docker-versus-native-2dde6b5a8552)
+
