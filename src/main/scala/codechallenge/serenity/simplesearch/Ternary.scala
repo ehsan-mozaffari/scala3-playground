@@ -20,12 +20,13 @@ object Ternary {
 
   def apply[V](words: Iterator[String]): Ternary[V] = {
     // words.map(word => apply.insert(word, true))
-    for {
-      word <- words
-      ap = apply.insert(word, true)
-    } yield {
-      
-    }
+    // for {
+    //   word <- words
+    //   ap = apply.insert(word, true)
+    // } yield {
+
+    // }
+    ???
   }
 
   private def keys[A](root: Ternary[A]): List[String] = collect(root, "")
