@@ -1,6 +1,6 @@
 package variance
 
-object VarianceMain extends App {
+object VarianceExamples{
 
   // Definitions:
   // == means equal
